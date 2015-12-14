@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2015 at 05:31 AM
+-- Generation Time: Dec 14, 2015 at 06:20 AM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -19,6 +19,19 @@ SET time_zone = "+00:00";
 --
 -- Database: `ac142_admin2`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `course`
+--
+
+CREATE TABLE IF NOT EXISTS `course` (
+  `id` int(11) NOT NULL,
+  `department` varchar(50) NOT NULL,
+  `course_name` varchar(80) NOT NULL,
+  `course_code` varchar(7) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -53,6 +66,12 @@ CREATE TABLE IF NOT EXISTS `subject` (
 --
 
 --
+-- Indexes for table `course`
+--
+ALTER TABLE `course`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `section`
 --
 ALTER TABLE `section`
@@ -68,6 +87,11 @@ ALTER TABLE `subject`
 -- AUTO_INCREMENT for dumped tables
 --
 
+--
+-- AUTO_INCREMENT for table `course`
+--
+ALTER TABLE `course`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `section`
 --
